@@ -10,10 +10,13 @@
         <script>
             class AppCallHandler {
                 markReady(inAppWebView) {
+                    console.log('markReady', inAppWebView);
                     this.inAppWebView = inAppWebView;
                 }
 
                 callHandler(handlerName, ...args) {
+                    console.log('callHandler', handlerName);
+                    console.log('callHandler', args);
                     if (this.inAppWebView) {
                         return this.inAppWebView.callHandler(handlerName);
                     }
