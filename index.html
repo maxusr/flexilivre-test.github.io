@@ -37,9 +37,11 @@
                 });
             });
             function emitAlert() {
+                console.log('emitAlert');
                 appCallHandler.callHandler('flexilivreWebAlert', 'Un bouton a été cliqué');
             }
             function emitPictureSelect() {
+                console.log('emitPictureSelect');
                 appCallHandler.callHandler('flexilivreWebPictureSelect', 'device')
                 .then(function(result) {
                     console.log('flexilivreWebPictureSelect result');
